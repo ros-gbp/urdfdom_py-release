@@ -1,3 +1,24 @@
+## urdfdom_py (jade) - 0.3.0-1
+
+The packages in the `urdfdom_py` repository were released into the `jade` distro by running `/usr/bin/bloom-release urdfdom_py -r jade -t jade` on `Sun, 18 Jan 2015 11:20:25 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+- upstream repository: https://github.com/ros/urdfdom/
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.3.0-0`
+- new version: `0.3.0-1`
+
+Versions of tools used:
+- bloom version: `0.5.16`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.0`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## urdfdom_py - 0.3.0-1
 
 User `isucan@isucan-glaptop0` released the packages in the `urdfdom_py` repository by running `/usr/bin/bloom-release -t indigo -r indigo urdfdom_py` on `Sun, 16 Feb 2014 09:01:08 -0000`
