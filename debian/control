@@ -1,0 +1,12 @@
+Source: ros-jade-urdfdom-py
+Section: misc
+Priority: extra
+Maintainer: Ioan Sucan <isucan@google.com>
+Build-Depends: debhelper (>= 9.0.0), python-catkin-pkg, python-dev, ros-jade-catkin
+Homepage: http://wiki.ros.org/urdf_parser_py
+Standards-Version: 3.9.2
+
+Package: ros-jade-urdfdom-py
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-dev, python-lxml, ros-jade-catkin
+Description: Python implementation of the URDF parser.
