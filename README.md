@@ -1,36 +1,46 @@
-urdfdom
-===========
+# urdf_parser_py
 
-The URDF (U-Robot Description Format) library provides core data structures and a simple XML parsers for populating the class data structures from an URDF file.
+## Development Setup
 
-For now, the details of the URDF specifications reside on http://ros.org/wiki/urdf
-  
-### Build Status
-[![Build Status](https://travis-ci.org/ros/urdfdom.png)](https://travis-ci.org/ros/urdfdom)
+You must manually run `setup.py`. For catkin development, you can install to $ws/../build/lib/pythonX.Y/dist-packages via
 
-### Installing from Source with ROS
+	devel_prefix=$(cd $(catkin_find --first-only)/.. && pwd)
+	cd ../urdf_parser_py
+	python setup.py install --install-layout deb --prefix $devel_prefix
 
-**Warning: this will break ABI compatibility with future /opt/ros updates through the debian package manager. This is a hack, use at your own risk.**
+Not yet sure how to get it to generate catkin-like development installs, which uses `__init__.py` to point to the development source directory.
 
-This is not best practice for installing, but works. This version is for ROS Hydro but should be easily customized for future version of ROS:
+## Authors
 
-```
-sudo mv /opt/ros/hydro/include/urdf_parser/ /opt/ros/hydro/include/_urdf_parser/
-sudo mv /opt/ros/hydro/lib/liburdfdom_model.so /opt/ros/hydro/lib/_liburdfdom_model.so
-sudo mv /opt/ros/hydro/lib/liburdfdom_model_state.so /opt/ros/hydro/lib/_liburdfdom_model_state.so
-sudo mv /opt/ros/hydro/lib/liburdfdom_sensor.so /opt/ros/hydro/lib/_liburdfdom_sensor.so
-sudo mv /opt/ros/hydro/lib/liburdfdom_world.so /opt/ros/hydro/lib/_liburdfdom_world.so
-sudo mv /opt/ros/hydro/lib/pkgconfig/urdfdom.pc /opt/ros/hydro/lib/pkgconfig/_urdfdom.pc
-sudo mv /opt/ros/hydro/share/urdfdom/cmake/urdfdom-config.cmake /opt/ros/hydro/share/urdfdom/cmake/_urdfdom-config.cmake
+*	Thomas Moulard - `urdfpy` implementation, integration
+*	David Lu - `urdf_python` implementation, integration
+*	Kelsey Hawkins - `urdf_parser_python` implementation, integration
+*	Antonio El Khoury - bugfixes
+*	Eric Cousineau - reflection (serialization?) changes
 
-cd ~/ros/urdfdom # where the git repo was checked out
-mkdir -p build
-cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/ros/hydro
-make -j8
-sudo make install
+## Reflection (or just Serialization?)
 
-# now rebuild your catkin workspace
-cd ~/ros/ws_catkin
-catkin_make
-```
+This an attempt to generalize the structure of the URDF via reflection to make it easier to extend. This concept is taken from Gazebo's SDF structure, and was done with SDF in mind to a) make an SDF parser and b) make a simple converter between URDF and SDF.
+
+### Changes
+
+*	Features:
+	*	Transmission and basic Gazebo nodes.
+	*	General aggregate type, for preserving the order of aggregate types (i.e., the URDF robot model, and for the future, SDF models, links with multiple visuals / collisions, etc).  This allows for basic checks to see if "scalar" elements are defined multiple times. (We were affected by this at one point with a pose defined twice with different values, screwing up the loading / saving of a model with this API).
+	*	Dumping to YAML, used for printing to string.
+		*	Doesn't preserve ordering because of it, but someone posted an issue about this on pyyaml's issue tracker, and I think a few solutions were posted (including one from the author)
+*	XML Parsing: minidom has been swapped out with lxml.etree, but it should not be hard to change that back. Maybe Sax could be used for event-driven parsing.
+*	API:
+	*	Loading methods rely primarily on instance methods rather than static methods, mirroring Gazebo's SDF construct-then-load method
+	*	Renamed static `parse_xml()` to `from_xml()`, and renamed `load_*` methods to `from_*` if they are static
+
+### Todo
+
+1.	Develop a Python SDF API in a `sdf` module.
+	*	Maybe make the package itself be `robot_model_py` so that the respective modules would be `robot_model_py.urdf_parser` and `robot_model_py.sdf_parser`?
+	*	Parse Gazebo's SDF definition files at some point? For speed's sake, parse it and have it generate code to use?
+2.	Make a direct, two-way URDF <-> SDF converter.
+	*	Gazebo has the ability to load URDFs and save SDFs, but it lumps everything together and (I think) adds some "noise" from OpenDE for positions.
+3.	Make the names a little clearer, especially the fact that `from_xml` and `to_xml` write to a node, but do not create a new one.
+4.	Figure out good policy for handling default methods. If saving to XML, write out default values, or leave them out for brevity (and to leave it open for change)? Might be best to add that as an option.
+5.	Find a lightweight package that can handle the reflection aspect more elegantly. Enthought traits? IPython's spinoff of traits?
