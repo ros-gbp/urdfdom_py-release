@@ -1,3 +1,24 @@
+## urdfdom_py (indigo) - 0.3.1-0
+
+The packages in the `urdfdom_py` repository were released into the `indigo` distro by running `/usr/bin/bloom-release urdfdom_py --track indigo --rosdistro indigo` on `Tue, 23 Feb 2016 02:02:47 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+- upstream repository: https://github.com/ros/urdf_parser_py/
+- release repository: https://github.com/ros-gbp/urdfdom_py-release.git
+- rosdistro version: `0.3.0-2`
+- old version: `0.3.0-2`
+- new version: `0.3.1-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.4`
+- vcstools version: `0.1.38`
+
+
 ## urdfdom_py (jade) - 0.3.0-1
 
 The packages in the `urdfdom_py` repository were released into the `jade` distro by running `/usr/bin/bloom-release urdfdom_py -r jade -t jade` on `Sun, 18 Jan 2015 11:20:25 -0000`
