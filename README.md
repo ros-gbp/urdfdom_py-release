@@ -1,3 +1,26 @@
+## urdfdom_py (kinetic) - 0.3.2-1
+
+The packages in the `urdfdom_py` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release urdfdom_py --track kinetic --rosdistro kinetic` on `Thu, 24 Mar 2016 01:01:34 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+
+- upstream repository: https://github.com/ros/urdf_parser_py/
+- release repository: https://github.com/ros-gbp/urdfdom_py-release.git
+- rosdistro version: `0.3.2-0`
+- old version: `0.3.2-0`
+- new version: `0.3.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.5`
+- vcstools version: `0.1.38`
+
+
 ## urdfdom_py (kinetic) - 0.3.2-0
 
 The packages in the `urdfdom_py` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release urdfdom_py --track kinetic --rosdistro kinetic` on `Tue, 22 Mar 2016 20:06:01 -0000`
