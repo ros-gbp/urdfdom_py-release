@@ -1,0 +1,12 @@
+Source: ros-indigo-urdfdom-py
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), python-catkin-pkg, python-dev, ros-indigo-catkin
+Homepage: http://wiki.ros.org/urdf_parser_py
+Standards-Version: 3.9.2
+
+Package: ros-indigo-urdfdom-py
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-dev, python-lxml, ros-indigo-catkin
+Description: Python implementation of the URDF parser.
