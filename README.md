@@ -1,3 +1,26 @@
+## urdfdom_py (lunar) - 0.3.3-0
+
+The packages in the `urdfdom_py` repository were released into the `lunar` distro by running `/usr/bin/bloom-release urdfdom_py --track lunar --rosdistro lunar` on `Fri, 10 Mar 2017 20:22:31 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+
+- upstream repository: https://github.com/ros/urdf_parser_py/
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.3.3-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.24`
+- catkin_pkg version: `0.3.1`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.6.1`
+- vcstools version: `0.1.39`
+
+
 ## urdfdom_py (kinetic) - 0.3.3-0
 
 The packages in the `urdfdom_py` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release urdfdom_py --track kinetic --rosdistro kinetic` on `Fri, 10 Feb 2017 23:57:35 -0000`
