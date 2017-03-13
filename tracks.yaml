@@ -41,7 +41,7 @@ tracks:
     release_tag: :{version}
     ros_distro: indigo
     vcs_type: git
-    vcs_uri: https://github.com/ros/urdf_parser_py/
+    vcs_uri: https://github.com/ros/urdf_parser_py.git
     version: :{ask}
   jade:
     actions:
@@ -65,7 +65,7 @@ tracks:
     release_tag: :{version}
     ros_distro: jade
     vcs_type: git
-    vcs_uri: https://github.com/ros/urdf_parser_py/
+    vcs_uri: https://github.com/ros/urdf_parser_py.git
     version: :{ask}
   kinetic:
     actions:
@@ -89,7 +89,7 @@ tracks:
     release_tag: :{version}
     ros_distro: kinetic
     vcs_type: git
-    vcs_uri: https://github.com/ros/urdf_parser_py/
+    vcs_uri: https://github.com/ros/urdf_parser_py.git
     version: :{ask}
   lunar:
     actions:
@@ -113,5 +113,5 @@ tracks:
     release_tag: :{version}
     ros_distro: lunar
     vcs_type: git
-    vcs_uri: https://github.com/ros/urdf_parser_py/
+    vcs_uri: https://github.com/ros/urdf_parser_py.git
     version: :{ask}
