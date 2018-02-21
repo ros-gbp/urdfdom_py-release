@@ -1,3 +1,26 @@
+## urdfdom_py (melodic) - 0.4.0-0
+
+The packages in the `urdfdom_py` repository were released into the `melodic` distro by running `/usr/bin/bloom-release urdfdom_py --track melodic --rosdistro melodic` on `Wed, 21 Feb 2018 21:12:03 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+
+- upstream repository: https://github.com/ros/urdf_parser_py.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.4.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.2`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.1`
+- rosdistro version: `0.6.6`
+- vcstools version: `0.1.40`
+
+
 ## urdfdom_py (lunar) - 0.3.3-0
 
 The packages in the `urdfdom_py` repository were released into the `lunar` distro by running `/usr/bin/bloom-release urdfdom_py --track lunar --rosdistro lunar` on `Fri, 10 Mar 2017 20:22:31 -0000`
