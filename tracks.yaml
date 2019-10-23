@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:ros-gbp/urdfdom_py-release.git
 tracks:
   hydro:
     actions:
