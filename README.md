@@ -1,3 +1,26 @@
+## urdfdom_py (noetic) - 0.4.3-1
+
+The packages in the `urdfdom_py` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic urdfdom_py` on `Wed, 01 Apr 2020 19:21:16 -0000`
+
+The `urdfdom_py` package was released.
+
+Version of package(s) in repository `urdfdom_py`:
+
+- upstream repository: https://github.com/ros/urdf_parser_py.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.4.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## urdfdom_py (melodic) - 0.4.3-1
 
 The packages in the `urdfdom_py` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -r melodic -t melodic urdfdom_py` on `Wed, 01 Apr 2020 19:14:27 -0000`
